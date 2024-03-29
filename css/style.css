@@ -123,11 +123,17 @@ main h1 {
 }
 
 .item img {
+  display: block;
   width: 100%;
   cursor: pointer;
 
   aspect-ratio: 16/9;
   object-fit: cover;
+
+  /* transition-property: all;
+  transition-duration: 400ms;
+  transition-delay: 1s;
+  transition-timing-function: ease-in-out; */
 
   transition: all 400ms ease-in-out;
 }
@@ -169,4 +175,36 @@ footer p {
   padding: 1rem;
   text-align: center;
   font-weight: 600;
+}
+
+header {
+  --startY: -100%;
+  animation: move 0.2s;
+}
+
+footer {
+  --startY: 100%;
+  animation: move 0.2s;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(var(--startY));
+  }
+}
+
+.item {
+  --delay: 0.4s;
+  animation: appear 0.4s var(--delay) backwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
 }
