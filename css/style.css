@@ -37,3 +37,43 @@ main {
 
   background-color: var(--color-base-gray-100);
 }
+
+header,
+nav,
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 4.5rem;
+
+  font-weight: 700;
+}
+
+header form {
+  flex: 1;
+}
+
+nav ul {
+  list-style: none;
+  font-size: 1.125rem;
+
+  color: var(--color-base-gray-300);
+}
+
+ul li.active {
+  color: var(--color-base-gray-900);
+}
+
+.avatar {
+  width: 2.625rem;
+  height: 2.625rem;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+footer p {
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+}
