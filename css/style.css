@@ -1,3 +1,10 @@
+:root {
+  --color-base-white: #FFF;
+  --color-base-gray-100: #F5F5F5;
+  --color-base-gray-300: #8D8D99;
+  --color-base-gray-900: #202024;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +14,8 @@
 }
 
 body {
-  background-color: white;
+  background-color: var(--color-base-white);
+  color: var(--color-base-gray-900);
 }
 
 #app {
@@ -24,4 +32,6 @@ body {
 
 main {
   overflow-y: scroll;
+
+  background-color: var(--color-base-gray-100);
 }
