@@ -124,9 +124,14 @@ main h1 {
 
 .item img {
   width: 100%;
+  cursor: pointer;
 
   aspect-ratio: 16/9;
   object-fit: cover;
+}
+
+.item img:hover {
+  filter: hue-rotate(7deg) contrast(101%) saturate(200%)
 }
 
 .details {
